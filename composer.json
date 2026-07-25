@@ -1,0 +1,70 @@
+{
+  "name": "kynetcode/wpzylos-events",
+  "description": "PSR-14 compliant event dispatcher for WPZylos framework",
+  "type": "library",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "wordpress",
+    "wpzylos",
+    "events",
+    "psr-14",
+    "dispatcher",
+    "listeners",
+    "subscribers"
+  ],
+  "homepage": "https://github.com/KYNetCode/wpzylos-events",
+  "authors": [
+    {
+      "name": "KYNetCode",
+      "email": "diggerwp@gmail.com",
+      "homepage": "https://github.com/KYNetCode",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/KYNetCode/wpzylos-events/issues",
+    "source": "https://github.com/KYNetCode/wpzylos-events",
+    "docs": "https://wpzylos.com/docs/latest/packages/wpzylos-events"
+  },
+  "require": {
+      "php": "^8.0",
+    "psr/event-dispatcher": "^1.0",
+    "kynetcode/wpzylos-core": "^1.0"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^1.10",
+    "phpunit/phpunit": "^9.6 || ^10.0",
+    "squizlabs/php_codesniffer": "^3.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "WPZylos\\Framework\\Events\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "WPZylos\\Framework\\Events\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit",
+    "analyze": "phpstan analyze",
+    "cs": "phpcs --standard=PSR12 src",
+    "cs-fix": "phpcbf --standard=PSR12 src",
+    "qa": ["@cs", "@analyze", "@test"]
+  },
+  "config": {
+    "sort-packages": true,
+    "platform": {
+      "php": "8.0.2"
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "funding": [
+    {
+      "type": "paypal",
+      "url": "https://www.paypal.com/donate/?hosted_button_id=66U4L3HG4TLCC"
+    }
+  ]
+}
